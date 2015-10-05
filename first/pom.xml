@@ -13,8 +13,26 @@
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
 	</properties>
-	<dependencies>
 	
+	<repositories>
+	    <repository>
+	      <id>freehep-maven</id>
+	      <name>Maven FreeHEP</name>
+	      <url>http://java.freehep.org/maven2</url>
+	    </repository>
+	    <repository>
+	        <id>maven-apache</id>
+	        <name>Maven Apache</name>
+	        <url>http://repo.maven.apache.org/maven2</url>
+	    </repository>
+	    <repository>    
+	        <id>maven1</id>
+	        <name>Maven.org</name>
+	        <url>http://repo1.maven.org/maven2</url>
+	    </repository>
+	</repositories>
+	
+	<dependencies>
 		<!-- DB -->
 		<dependency>
 		    <groupId>org.mybatis</groupId>
@@ -40,7 +58,11 @@
 		    <version>1.4</version>
 		</dependency>
 	
-	
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>5.1.31</version>
+		</dependency>	
 	
 		<!-- Spring -->
 		<dependency>
@@ -143,7 +165,7 @@
 			<artifactId>junit</artifactId>
 			<version>4.7</version>
 			<scope>test</scope>
-		</dependency>        
+		</dependency>
 	</dependencies>
     <build>
         <plugins>
@@ -180,6 +202,10 @@
                 <configuration>
                     <mainClass>org.test.int1.Main</mainClass>
                 </configuration>
+            </plugin>
+            <plugin>
+            	<groupId>mysql-connecto</groupId>
+            	<artifactId>mysql-connecto</artifactId>
             </plugin>
         </plugins>
     </build>
