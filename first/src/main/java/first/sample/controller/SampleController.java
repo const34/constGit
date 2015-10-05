@@ -2,8 +2,6 @@ package first.sample.controller;
 
 import java.util.List;
 import java.util.Map;
-
-import javax.activation.CommandMap;
 import javax.annotation.Resource;
 
 import org.apache.log4j.Logger;
